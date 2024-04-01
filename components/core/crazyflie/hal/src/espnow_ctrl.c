@@ -190,7 +190,7 @@ static esp_err_t espnow_ctrl_responder_bind_process(uint8_t *src_addr, void *dat
 #endif
 
     if (ctrl_data->responder_value_b) {
-        ESP_LOGI(TAG, "bind, esp_log_timestamp: %d, timestamp: %d, rssi: %d, rssi: %d",
+        ESP_LOGI(TAG, "bind, esp_log_timestamp: %lu timestamp: %lu, rssi: %d, rssi: %d",
                     esp_log_timestamp(), g_bindlist.timestamp, rx_ctrl->rssi, g_bindlist.rssi);
 
         bool bind_cb_flag = false;
